@@ -5,11 +5,11 @@ var pingPongNumbers = function(input) {
     if ((i%3 !=0) && (i%5 !=0)){
       pingPongArray.push(i);
     } else if ((i%15===0)){
-    pingPongArray.push("pingpong");
+      pingPongArray.push("pingpong");
     } else if (i%5===0){
-     pingPongArray.push("pong");
+      pingPongArray.push("pong");
     } else if (i%3===0){
-    pingPongArray.push("ping");
+      pingPongArray.push("ping");
     }
   }
   return pingPongArray;
@@ -20,14 +20,14 @@ $(document).ready( function() {
   $("form#blank-number").submit(function(event) {
     event.preventDefault();
     $('#output').empty();
-  var potentialPingPong = parseInt($("#number-input").val());
-  var answer = pingPongNumbers(potentialPingPong);
-  if (answer === undefined || answer ===null || (answer <=0)){
+    var potentialPingPong = parseInt($("#number-input").val());
+    var answer = pingPongNumbers(potentialPingPong);
+    if (answer === undefined || answer ===null || (answer <=0)){
     alert ("Please enter a positive number greater than 0");
-  } else {
-    answer.forEach (function (item){
+    } else {
+      answer.forEach (function (item){
       $("#output").append("<li>" + item + "</li>");
-  })
-  }
+      })
+    }
   });
 });
