@@ -10,8 +10,8 @@ var pingPongNumbers = function(input) {
         pingPongArray.push("pong");
     } else if (i%3===0){
         pingPongArray.push("ping");
+      }
     }
-  }
   return pingPongArray;
 }
 
